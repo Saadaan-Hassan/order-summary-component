@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/* ----CSS Reset---- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----CSS Custom Variables---- */
+:root {
+  /* Colors */
+  --color-primary-900: hsl(245, 75%, 52%);
+  --color-primary-300: hsl(225, 100%, 94%);
+  --color-primary-200: hsla(224.5, 100%, 93.9%, 0.41);
+
+  --color-neutral-900: hsl(223, 47%, 23%);
+  --color-neutral-700: hsl(224, 23%, 55%);
+  --color-neutral-300: hsl(225, 100%, 98%);
+
+  --color-hover-900: hsla(0, 0%, 0%, 0.79);
+  --color-hover-100: hsla(244.9, 74.7%, 52%, 0.67);
+
+  /* Font Families */
+  --ff-primary: "Red Hat Display", sans-serif;
+
+  /* Font Weights */
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* Font Sizes */
+  --fs-large: 20px;
+  --fs-medium: 14px;
+  --fs-xsmall: 11px;
+}
+
+/*  */
+body {
+  background: var(--color-primary-300)
+    url(../images/pattern-background-desktop.svg) no-repeat;
+
+  font-family: var(--ff-primary);
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+main {
+  --outter-radius: 15px;
+
+  width: 20rem;
+  margin: 5rem auto;
+  background-color: var(--color-neutral-300);
+  border-radius: var(--outter-radius);
+}
+
+.img-container {
+  background: url(../images/illustration-hero.svg) center center/cover;
+  height: 10rem;
+  width: 100%;
+  border-radius: var(--outter-radius) var(--outter-radius) 0 0;
+}
+
+.card {
+  --inner-radius: 10px;
+
+  width: 80%;
+  margin: auto;
+}
+
+.card div {
+  width: 100%;
+}
+
+.card-title-desc h1 {
+  margin: 2rem 2rem 0;
+}
+
+.card-title-desc p {
+  margin: 1rem;
+}
+
+.price-plan {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  justify-content: space-between;
+  border-radius: var(--inner-radius);
+}
+
+.price-plan p {
+  padding: 0.1em 0;
+}
+
+.price-plan-change {
+  padding-left: 4rem;
+}
+
+.price-plan-change a {
+  color: var(--color-primary-900);
+}
+
+.price-plan-change a:hover {
+  color: var(--color-hover-100);
+  text-decoration: none;
+}
+
+.decision a {
+  margin: 0.7rem 0 2rem;
+  cursor: pointer;
+}
+
+.decision a:hover {
+  color: var(--color-hover-900);
+}
+
+/* ----Attributes---- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ----Utility Class---- */
+.flex-all-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.btn {
+  font-family: var(--ff-primary);
+  margin: 1rem;
+  padding: 0.7rem;
+  width: 100%;
+  border: none;
+  border-radius: var(--inner-radius);
+  box-shadow: 0px 5px 13px hsla(0, 2.2%, 44.1%, 0.64);
+}
+
+.btn:hover {
+  background-color: var(--color-hover-100);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Font Sizes */
+
+.fs-large {
+  font-size: var(--fs-large);
+}
+
+.fs-medium {
+  font-size: var(--fs-medium);
+}
+
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fs-xsmall {
+  font-size: var(--fs-xsmall);
+}
+
+/* Font Weights */
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-black {
+  font-weight: var(--fw-black);
+}
+
+/* Font Colors */
+.fc-neutral-900 {
+  color: var(--color-neutral-900);
+}
+
+.fc-neutral-700 {
+  color: var(--color-neutral-700);
+}
+
+.fc-neutral-300 {
+  color: var(--color-neutral-300);
+}
+
+/* Backgorund Colors */
+
+.bc-primary-900 {
+  background-color: var(--color-primary-900);
+}
+
+.bc-primary-200 {
+  background-color: var(--color-primary-200);
+}
